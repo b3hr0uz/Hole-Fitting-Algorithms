@@ -41,7 +41,7 @@
 		BE39C7702BCF6AC9005B5DAE = {
 			isa = PBXGroup;
 			children = (
-				BE39C77B2BCF6AC9005B5DAE /* Hole-Fitting-Algorithms */,
+				BE39C77C2BCF6AC9005B5DAE /* main.c */,
 				BE39C77A2BCF6AC9005B5DAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +52,6 @@
 				BE39C7792BCF6AC9005B5DAE /* Hole-Fitting-Algorithms */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BE39C77B2BCF6AC9005B5DAE /* Hole-Fitting-Algorithms */ = {
-			isa = PBXGroup;
-			children = (
-				BE39C77C2BCF6AC9005B5DAE /* main.c */,
-			);
-			path = "Hole-Fitting-Algorithms";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
