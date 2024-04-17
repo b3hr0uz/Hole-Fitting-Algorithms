@@ -10,6 +10,13 @@
 
 // decalare global variables including linked list of blocks containing id, starting address, ending address, link to next node in list
 
+struct node {
+    int blockID;
+}*blockList = NULL;
+typedef struct node blockType;
+
+int pmSize;
+int remaining;
 
 //********************************************************************
 void option1(void) {
@@ -17,13 +24,17 @@ void option1(void) {
     // prompt for size of physical memory
     // initilize remaining memory to size of physical memory
     // allocate memory for linked list of blocks
+    
+    blockList = (blockType *)malloc(sizeof(blockType));
     // create "dummy" block with id -1, staring/ending address of 0 and link of NULL
+    blockList->blockID = -1;
+    
     return;
 }
 
 
 /********************************************************************/
-void printAllocationTable() {
+void printAllocationTable(void) {
     // declare/initialize local variables
     // print header of table containing fields: ID, Start, End
     // print each block in list with while-loop, loop until end of list, advancing "current block" pointer
@@ -63,7 +74,7 @@ void option3(void) {
     // while not end of list, loop
         //set values for start and end of current hole
         // if block fits in hole,
-            set flag "at least one" fitting hole found
+            // set flag "at least one" fitting hole found
             // if current hole is smaller than best so far
                 // set new value for "best so far", "best start", copy "best block" to current block
         //advance "current block" pointer
@@ -86,7 +97,7 @@ void option4(void) {
     // while not end of list, loop
         //set values for start and end of current hole
         // if block fits in hole,
-            set flag "at least one" fitting hole found
+            // set flag "at least one" fitting hole found
             // if current hole is larger than worst so far
                 // set new value for "worst so far", "worst start", copy "worst block" to current block
         //advance "current block" pointer
@@ -121,7 +132,7 @@ void option6(void) {
 
 
 /********************************************************************/
-void option7(block_type *node) {
+void option7(blockType *node) {
     // if node is NULL return
     // else call self on link field of node, free node
     return;
@@ -131,6 +142,7 @@ void option7(block_type *node) {
 //*************************************************************
 int main(void) {
     // declare local vars
+    {
     // while user has not chosen to quit
         // print menu of options
         // prompt for menu selection
