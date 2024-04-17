@@ -9,13 +9,12 @@
 #include <stdlib.h>
 
 // decalare global variables including linked list of blocks containing id, starting address, ending address, link to next node in list
-
 struct node {
     int blockID;
 }*blockList = NULL;
 typedef struct node blockType;
 
-int pmSize;
+int physicalMemorySize;
 int remaining;
 
 //********************************************************************
@@ -64,6 +63,8 @@ void option2(void) {
 /***************************************************************/
 void option3(void) {
     // declare/initialize local variables
+    int bestSoFar = physicalMemorySize;
+    
     // prompt for block id & block size
     // if block size is larger than remaining memory, print message, return
     // if block list is "empty", allocate new block, set fields for new block, link to block list, reduce remaining memory, print allocation table, return
