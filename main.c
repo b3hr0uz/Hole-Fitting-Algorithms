@@ -12,7 +12,7 @@
 
 
 //********************************************************************
-void "PROCEDURE FOR OPTION 1"() {
+void option1(void) {
     // declare/initialize local variables
     // prompt for size of physical memory
     // initilize remaining memory to size of physical memory
@@ -23,7 +23,7 @@ void "PROCEDURE FOR OPTION 1"() {
 
 
 /********************************************************************/
-void "PROCEDURE TO PRINT ALLOCATION TABLE"() {
+void printAllocationTable() {
     // declare/initialize local variables
     // print header of table containing fields: ID, Start, End
     // print each block in list with while-loop, loop until end of list, advancing "current block" pointer
@@ -32,7 +32,7 @@ void "PROCEDURE TO PRINT ALLOCATION TABLE"() {
 
 
 /********************************************************************/
-void "PROCEDURE FOR OPTION 2"() {
+void option2(void) {
     // declare/initialize local variables
     // prompt for block id & block size
     // if block size is larger than remaining memory, print message, return
@@ -51,7 +51,7 @@ void "PROCEDURE FOR OPTION 2"() {
 
 
 /***************************************************************/
-void "PROCEDURE FOR OPTION 3"() {
+void option3(void) {
     // declare/initialize local variables
     // prompt for block id & block size
     // if block size is larger than remaining memory, print message, return
@@ -74,7 +74,7 @@ void "PROCEDURE FOR OPTION 3"() {
 
 
 /***************************************************************/
-void "PROCEDURE FOR OPTION 4"() {
+void option4(void) {
     // declare/initialize local variables
     // prompt for block id & block size
     // if block size is larger than remaining memory, print message, return
@@ -97,7 +97,7 @@ void "PROCEDURE FOR OPTION 4"() {
 
 
 /********************************************************************/
-void "PROCEDURE FOR OPTION 5"() {
+void option5(void) {
     // declare/initialize local variables
     // prompt for block id
     // initialize "current block"
@@ -110,7 +110,7 @@ void "PROCEDURE FOR OPTION 5"() {
 
 
 /********************************************************************/
-void "PROCEDURE FOR OPTION 6"() {
+void option6(void) {
     // declare/initialize local variables
     // initialize "current block"
     // while end of block list not reached
@@ -121,7 +121,7 @@ void "PROCEDURE FOR OPTION 6"() {
 
 
 /********************************************************************/
-void "RECURSIVE PROCEDURE FOR OPTION 7"(block_type *node) {
+void option7(block_type *node) {
     // if node is NULL return
     // else call self on link field of node, free node
     return;
@@ -129,7 +129,7 @@ void "RECURSIVE PROCEDURE FOR OPTION 7"(block_type *node) {
 
 
 //*************************************************************
-int main() {
+int main(void) {
     // declare local vars
     // while user has not chosen to quit
         // print menu of options
