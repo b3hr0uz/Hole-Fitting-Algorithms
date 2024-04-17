@@ -9,6 +9,8 @@
 #include <stdlib.h>
 
 // Declare global variables including linked list of blocks containing id, starting address, ending address, link to next node in list
+#define MENU_OF_OPTIONS "Hole-fitting Algorithms\n-----------------\n1) Enter parameters\n2) Allocate memory for block using First-fit\n3) Allocate memory for block using Best-fit\n4) Allocate memory for block using Worst-fit\n5) Deallocate memory for block\n6) Defragment memory\n7) Quit program\n\n"
+
 struct block {
     int blockID;
     int startAddress;
@@ -37,7 +39,7 @@ void initializePhysicalMemory(void) {
     blockList->startAddress = 0;
     blockList->endAddress = 0;
     blockList->next = NULL;
-    printf("Physical memory initialized with size %d.\n", physicalMemorySize);
+    printf("\nPhysical memory initialized with size %d.\n\n", physicalMemorySize);
 }
 
 /********************************************************************/
@@ -182,8 +184,7 @@ int main(void) {
     // While user has not chosen to quit
     do {
         // Print menu of options
-        printf("Hole-fitting Algorithms\n-----------------\n");
-        printf("1) Enter parameters\n2) Allocate memory for block using First-fit\n3) Allocate memory for block using Best-fit\n4) Allocate memory for block using Worst-fit\n5) Deallocate memory for block\n6) Defragment memory\n7) Quit program\n");
+        printf(MENU_OF_OPTIONS);
         // Prompt for menu selection
         printf("Enter selection: ");
         scanf("%d", &selection);
