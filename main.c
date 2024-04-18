@@ -291,21 +291,21 @@ void deallocateBlock(void) {
 /********************************************************************/
 void defragmentMemory(void) {
     // Declare/Initialize local variables
-    blockType *currentBlock = blockList->next;
+    blockType *currentBlock = blockList -> next;
     int currentStart = 0; // Start address for the first block after defragmentation
 
     // While end of block list not reached
     while (currentBlock != NULL) {
         // Calculate the actual size of the current block
-        int blockSize = currentBlock->endAddress - currentBlock->startAddress;
+        int blockSize = currentBlock -> endAddress - currentBlock -> startAddress;
         // Adjust start field of the current block
-        currentBlock->startAddress = currentStart;
+        currentBlock -> startAddress = currentStart;
         // Set the new end address based on the new start address and the block size
-        currentBlock->endAddress = currentBlock->startAddress + blockSize;
+        currentBlock -> endAddress = currentBlock -> startAddress + blockSize;
         // Update currentStart for the next block
         currentStart += blockSize;
         // Move to the next block
-        currentBlock = currentBlock->next;
+        currentBlock = currentBlock -> next;
     }
     // Print allocation table to show the new compacted layout
     printAllocationTable();
